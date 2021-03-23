@@ -21,6 +21,7 @@
 # casting implemented int()
 # display the age back to the user with an appropriate message
 
+# Stores movies as a dictionary.
 movies = {
     # film : age
     "Predator": 18,
@@ -35,7 +36,7 @@ movies = {
 
 # Convert movie keys into a set to randomise it.
 movies_set = set(movies.keys())
-# Sets can be accessed, so it is converted to a list.
+# Sets cannot be accessed, so it is converted to a list.
 movie_chosen = list(movies_set)[3]
 # Fetch the chosen movie's age.
 movie_age = movies[movie_chosen]
