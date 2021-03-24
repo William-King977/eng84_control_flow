@@ -95,7 +95,7 @@ Asking for the user's name until it is valid
 isValid = False
 while not isValid:
     name = input("Enter your name: ")
-    if name.isalpha():
+    if name.isalpha(): # Checks if it only has letters
         isValid = True
         print("This name is valid.")
     else:
