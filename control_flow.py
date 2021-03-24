@@ -36,25 +36,67 @@ movies = {
 
 # Convert movie keys into a set to randomise it.
 movies_set = set(movies.keys())
-# Sets cannot be accessed, so it is converted to a list.
+# Sets cannot be accessed by an index, so it is converted to a list.
 movie_chosen = list(movies_set)[3]
 # Fetch the chosen movie's age.
 movie_age = movies[movie_chosen]
 
-print(f"The movie screened now is {movie_chosen}.")
-my_age = int(input("Please enter your age: "))
-print(f"You are {my_age} years old.") # print the age.
-
-if my_age >= movie_age:
-    print("Thank you, please proceed to your purchase.")
-elif my_age < movie_age:
-    print("Sorry, you are too young to watch this movie.")
-else:
-    print("Oops, something went wrong.")
+# print(f"The movie screened now is {movie_chosen}.")
+# my_age = int(input("Please enter your age: "))
+# print(f"You are {my_age} years old.") # print the age.
+#
+# if my_age >= movie_age:
+#     print("Thank you, please proceed to your purchase.")
+# elif my_age < movie_age:
+#     print("Sorry, you are too young to watch this movie.")
+# else:
+#     print("Oops, something went wrong.")
 
 
 #### WHILE LOOPS ####
 
 
+
 #### FOR LOOPS ####
+shopping_list = ["bread", "eggs", "milk", "orange"]
+# print(shopping_list[0])
+# print(shopping_list[1])
+# print(shopping_list[2])
+# print(shopping_list[3])
+
+# Using a for loop to iterate through the list
+# for items in shopping_list:
+#     print(items)
+
+# Iterate through each letter in a string
+# for letter in "fruits":
+#     print(letter)
+
+# Exit a loop early
+# for item in shopping_list:
+#     print(item)
+#     if item == "milk":
+#         break # exits the loop
+
+# Dictionary of food bills to iterate through
+food_bill = {1: {"name": "Will", "bill": "£1"},
+             2: {"name": "King", "bill": "£2"},
+             3: {"name": "BigW", "bill": "£3"}}
+
+# Print the names and the bill amount for each person
+for value in food_bill.values():
+    print(f"{value['name']} paid {value['bill']}")
+
+# Separating the key and value.
+for key, value in food_bill.items():
+    print(f"{value['name']} paid {value['bill']}")
+
+
+
+
+
+
+
+
+
 

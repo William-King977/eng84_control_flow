@@ -16,38 +16,67 @@ else:
     print("Oops, something went wrong.")
 ```
 
-## while loops
-While loops execute a section of code until the condition is 
-no longer met. Without a stopping condition, while loops will
-run indefinitely.
+## `while` loops
+The `while` loop executes a section of code until the condition is 
+no longer met. Without a way of stopping the condition, 
+while loops will run indefinitely.
 ```python
 # Counts down from 10 to 1, and outputs it.
 num = 10
 while num > 0:
     print(num)
     num -= 1
+
+# Asking for user input until it is valid.
+isValid = False
+while not isValid:
+    name = input("Enter your name: ")
+    if name.isalpha():
+        isValid = True
+        print("This name is valid.")
+    else:
+        print("Your name must only contain letters.")
+        print("Please enter again.")
 ```
 
-## for loops
-For loops are used to iterate over a sequence (data collections, 
+## `for` loops
+The `for` loop is used to iterate over a sequence (data collections, 
 strings). They can be modified to iterate a section of code a
 set number of times using `range()`.
 
-Iterating through data collections
+Iterating through a list
 ```python
-# Iterating through a list
-fruits = ["apple", "coconut", "grapes"]
-for x in fruits:
-    print(fruits)
-    
-# Iterating a string. Prints each letter.
-for x in "king":
+shopping_list = ["bread", "eggs", "milk", "orange"]
+for item in shopping_list:
+    print(item)
+```
+
+Iterating through each character in a string
+```python
+# Prints each character.
+for x in "fruits":
     print(x)
+```
+
+Iterating through a dictionary
+```python
+food_bill = {1: {"name": "Will", "bill": "£1"},
+             2: {"name": "King", "bill": "£2"},
+             3: {"name": "BigW", "bill": "£3"}}
+
+# Fetching just the value (another dictionary)
+for value in food_bill.values():
+    print(f"{value['name']} paid {value['bill']}")
+
+# Separating the key and value, same output.
+for key, value in food_bill.items():
+    print(f"{value['name']} paid {value['bill']}")
 ```
 
 Using `range()`
 ```python
-# Prints numbers 0 to 9
+# Prints numbers 0 to 9. 
+# The loop is run 10 times.
 for i in range(10):
     print(i)
 ```
