@@ -87,8 +87,43 @@ food_bill = {1: {"name": "Will", "bill": "£1"},
 # for key, value in food_bill.items():
 #     print(f"{value['name']} paid {value['bill']}")
 
+# Nested for loop
+# for item in food_bill.values():
+#     # Outputs the name and bill individually
+#     for name_bill in item.values():
+#         print(name_bill)
+
 
 #### WHILE LOOPS ####
+# Syntax while condition:
+# Can run indefinitely if there isn't a way of stopping the condition.
+
+# Counting from 0 to 9
+# num = 0
+# while num < 10: # while true, continue. If false, stop.
+#     print(f"It's working -> {num}")
+#     num += 1
+
+# An if condition inside
+# num = 0
+# while num < 10:
+#     print(f"It's working -> {num}")
+#     if num == 4: # if true, the loop ends
+#         break
+#     num += 1
+
+# Asking for user input
+user_prompt = True
+while user_prompt:
+    age = input("Enter your age: ")
+    if age.isdigit(): # checks if the input is in digits
+        user_prompt = False
+    else:
+        print("Please enter your age in digits.")
+print(f"Your age is {age}.") # Runs when the user enters their age in digits
+
+
+
 
 
 

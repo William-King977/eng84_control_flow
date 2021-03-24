@@ -59,6 +59,12 @@ for value in food_bill.values():
 # Separating the key and value, same output.
 for key, value in food_bill.items():
     print(f"{value['name']} paid {value['bill']}")
+
+# Nested for loop
+for item in food_bill.values():
+    # Outputs the name, then bill on a separate line.
+    for name_bill in item.values():
+        print(name_bill)
 ```
 
 Using `range()`
@@ -71,17 +77,21 @@ for i in range(10):
 
 ## `while` loops
 The `while` loop executes a section of code until the condition is 
-no longer met. Without a way of stopping the condition, 
-while loops will run indefinitely.
+no longer met. It is used when we don't know how many times
+the code needs to be repeated. Without a way of stopping 
+the condition, while loops will run indefinitely.
 
+Using a `while` loop for counting down
 ```python
 # Counts down from 10 to 1, and outputs it.
 num = 10
 while num > 0:
     print(num)
     num -= 1
+```
 
-# Asking for user input until it is valid.
+Asking for the user's name until it is valid
+```python 
 isValid = False
 while not isValid:
     name = input("Enter your name: ")
