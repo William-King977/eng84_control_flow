@@ -16,29 +16,6 @@ else:
     print("Oops, something went wrong.")
 ```
 
-## `while` loops
-The `while` loop executes a section of code until the condition is 
-no longer met. Without a way of stopping the condition, 
-while loops will run indefinitely.
-```python
-# Counts down from 10 to 1, and outputs it.
-num = 10
-while num > 0:
-    print(num)
-    num -= 1
-
-# Asking for user input until it is valid.
-isValid = False
-while not isValid:
-    name = input("Enter your name: ")
-    if name.isalpha():
-        isValid = True
-        print("This name is valid.")
-    else:
-        print("Your name must only contain letters.")
-        print("Please enter again.")
-```
-
 ## `for` loops
 The `for` loop is used to iterate over a sequence (data collections, 
 strings). They can be modified to iterate a section of code a
@@ -49,6 +26,17 @@ Iterating through a list
 shopping_list = ["bread", "eggs", "milk", "orange"]
 for item in shopping_list:
     print(item)
+```
+
+To exit a loop early, use `break`
+```python
+shopping_list = ["bread", "eggs", "milk", "orange"]
+
+# Only outputs "bread", "eggs" and "milk".
+for item in shopping_list:
+    print(item)
+    if item == "milk":
+        break
 ```
 
 Iterating through each character in a string
@@ -79,4 +67,28 @@ Using `range()`
 # The loop is run 10 times.
 for i in range(10):
     print(i)
+```
+
+## `while` loops
+The `while` loop executes a section of code until the condition is 
+no longer met. Without a way of stopping the condition, 
+while loops will run indefinitely.
+
+```python
+# Counts down from 10 to 1, and outputs it.
+num = 10
+while num > 0:
+    print(num)
+    num -= 1
+
+# Asking for user input until it is valid.
+isValid = False
+while not isValid:
+    name = input("Enter your name: ")
+    if name.isalpha():
+        isValid = True
+        print("This name is valid.")
+    else:
+        print("Your name must only contain letters.")
+        print("Please enter again.")
 ```

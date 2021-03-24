@@ -53,10 +53,6 @@ movie_age = movies[movie_chosen]
 #     print("Oops, something went wrong.")
 
 
-#### WHILE LOOPS ####
-
-
-
 #### FOR LOOPS ####
 shopping_list = ["bread", "eggs", "milk", "orange"]
 # print(shopping_list[0])
@@ -84,12 +80,15 @@ food_bill = {1: {"name": "Will", "bill": "£1"},
              3: {"name": "BigW", "bill": "£3"}}
 
 # Print the names and the bill amount for each person
-for value in food_bill.values():
-    print(f"{value['name']} paid {value['bill']}")
-
+# for value in food_bill.values():
+#     print(f"{value['name']} paid {value['bill']}")
+#
 # Separating the key and value.
-for key, value in food_bill.items():
-    print(f"{value['name']} paid {value['bill']}")
+# for key, value in food_bill.items():
+#     print(f"{value['name']} paid {value['bill']}")
+
+
+#### WHILE LOOPS ####
 
 
 
